@@ -1,0 +1,16 @@
+a {
+    color: red;
+    text-decoration: none;
+}
+
+/*block satirdan inline satira cevirdigim icin yan yana geldiler*/
+li {
+    display: inline;
+}
+
+/*burada yazacagim h1 {
+            background-color: red;
+        } calismaz, cunku ben onlara inline kullanim yaptim ve ezdim*/
+
+
+/*her sayfada style etiketi acmak yerine, her sayfaya ozel css dosyasi da olusturup, bu dosyalar ile isimi yapabilirim*/
