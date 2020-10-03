@@ -1,0 +1,43 @@
+p[title] {
+    border: 1px solid gray;
+    /*padding yazi ile cerceve arasindaki boslugu ayarlar*/
+    padding: 5px;
+}
+
+p[title="third paragraph"] {
+    background-color: gold;
+}
+
+/*
+~ isareti ile forth paragraph yazmama gerek kalmaz, yalnizca forth yazmam yeterli olur
+*/
+p[title~="forth"] {
+    background-color: aqua;
+}
+
+/*
+^ isareti ile http ile baslayan demek istiyorum
+*/
+a[href^="https"] {
+    color: black;
+}
+
+a[href$="com"] {
+    color: darkgreen;
+}
+
+a[href="https://www.example.net"][target="_blank"] {
+    color: deeppink;
+}
+
+input[type="text"] {
+    display: block;
+    width: 300px;
+    background-color: red;
+}
+
+input[type="button"] {
+    background: #4CAF50;
+    color: #FFFFFF;
+    padding: 8px 16px;
+}
