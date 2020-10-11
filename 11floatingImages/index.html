@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>floating images</title>
+    <style>
+        .clear {
+            overflow: auto;
+            /*
+            normalde border yaziya gore ayarlanacagindan, border'in cizgileri fotografin ortasindan gececegi icin
+            overflow ozelligi ile bunu engelliyorum
+            */
+        }
+
+        p {
+            border: 1px solid gray;
+            /*
+            padding ile border ile metin arasindaki boslugu ayarliyorum
+            */
+            padding: 5px;
+        }
+
+        img {
+            width: 200px;
+            /*
+            yazinin fotografin altindan degil hemen yanindan baslamasi icin float ozellligini kullanacagim
+            */
+            float: left;
+            /*
+            yazi ile fotograf arasindaki boslugu ayarlayacagim
+            */
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam tempore amet consequatur temporibus mollitia beatae dolorem ea sit sequi rerum perspiciatis qui ipsa provident, explicabo dolor voluptate atque ab magnam.
+
+    </p>
+
+    <p class="clear">
+        <img src="1.jpg" alt="">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa officia, facere nihil consequuntur excepturi similique odit, autem neque, deserunt alias quasi possimus minus dolorem fugiat. Quaerat mollitia a distinctio dolor!
+
+    </p>
+
+</body>
+
+</html>
