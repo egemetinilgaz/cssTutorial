@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display</title>
+    <style>
+        /*
+        display: none | inline | block | inline-block
+        
+        browser defaults
+        
+        override defaults
+        */
+
+        div {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background: red;
+            margin: 5px;
+        }
+
+        #first {
+            width: 500px;
+        }
+
+        span {
+            background: blue;
+            display: inline-block;
+            /*
+            span etiketlerde width ve height kullanmak icin block ya da inline-block ozelligini display'e vermem gerekiyor
+            
+            tam tersi block etiketleri de  inline etiketler yapabilirim
+            */
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="first">
+        first
+    </div>
+
+    <div id="second">
+        second
+    </div>
+
+    <span>
+        deneme 1 Lorem ipsum dolor.
+    </span>
+
+    <span>
+        deneme 2
+    </span>
+
+    <span>
+        deneme3
+    </span>
+
+    <a href="">
+        home
+    </a>
+
+    <a href="">
+        about
+    </a>
+
+    <a href="">
+        contact
+    </a>
+
+</body>
+
+</html>
