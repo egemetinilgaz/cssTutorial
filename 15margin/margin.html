@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>margin</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        #first {
+            background: red;
+            /*
+            asagida verdigim degerler saat yonunde gider
+            yani top, right, bottom ve left seklinde
+            margin: 10px 10px 50px 100px;
+            yukaridaki degerleri istersem ayri ayri da verebilirim
+            ya da direkt ust ve alt, sag ve sol olarak da verebilirim
+            ornegin; 100px(ust ve alt), 200px(sag ve sol)
+            */
+            margin-top: 50px;
+        }
+
+        #second {
+            background: blue;
+            margin-top: 100px;
+            /*
+            sayfada hangi boyutta olursa olsun sayfanin surekli tam ortasina gelir
+            */
+            margin: auto;
+        }
+
+        #third {
+            background: green;
+            margin-top: 150px;
+        }
+
+        span {
+            background: red;
+            /*
+            inline elemanlara verilen margin degerleri ust ve alttan etki etmez
+            sadece sagdan ve soldan etki eder
+            ustten ve alttan da etkili olmasini istersem
+            display: inline-block; yazarim ve bunu block haline getiririm
+            */
+            margin: 30px;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box" id="first">
+        box 1
+    </div>
+
+    <div class="box" id="second">
+        box 2
+    </div>
+
+    <div class="box" id="third">
+        box 3
+    </div>
+
+    <span>
+        text 1
+    </span>
+
+    <span>
+        text 2
+    </span>
+
+    <span>
+        text 3
+    </span>
+
+</body>
+
+</html>
