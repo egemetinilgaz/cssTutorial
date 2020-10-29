@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        /*
+        ya da
+        * {
+            margin: 0px;
+        }
+        
+        diyerek safyada ne kadar margin degeri alan etiket varsa hepsini sifirlariz
+        */
+
+        .box {
+            margin-bottom: 10px;
+            width: 500px;
+        }
+
+        #first {
+            background: gold;
+            /*
+            padding; icerik ile koseler arasindaki mesafeyi belirler
+            */
+
+            /*
+            burada dikkat etmem gereken nokta;
+            yukarida box'in width'ine 500px verdikten sonra burada da padding-left'e 50px verdim
+            bu durumda box'in width'i 550px olacak, yani kutu 50px daha genisler
+            */
+            padding-left: 50px;
+        }
+
+        #second {
+            background: gray;
+
+        }
+
+        span {
+            background: orange;
+            margin-right: 20px;
+            /*
+            padding ile inline etiketlere sagdan soldan ve ustten alttan deger verebiliriz
+            margin gibi degiller
+            ancak yerleri degismeyecegi icin diger etiketlerin uzerine gelebilir
+            */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box" id="first">
+        Komple Uygulamalı Web Geliştirme
+    </div>
+
+    <div class="box" id="second">
+        Asp net Core 2 Mvc Kursu : Sıfırdan İleri Seviyeye
+    </div>
+
+    <span>
+        Komple Uygulamalı Web Geliştirme
+    </span>
+
+    <span>
+        Asp net Core 2 Mvc Kursu : Sıfırdan İleri Seviyeye
+    </span>
+
+</body>
+
+</html>
