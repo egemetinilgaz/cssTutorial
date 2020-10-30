@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>border</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .box {
+            width: 120px;
+            height: 120px;
+            background: lightgray;
+            margin: 5px;
+            padding: 10px;
+        }
+
+        #first {
+            /*
+            bu sekilde tek tek deger vererek yazabilirim
+            */
+            border-top-width: 1px;
+            border-right-width: 2px;
+            border-bottom-width: 3px;
+            border-left-width: 4px;
+
+            border-top-style: solid;
+            border-right-style: dashed;
+            border-bottom-style: groove;
+            border-left-style: double;
+
+            border-top-color: red;
+            border-right-color: aqua;
+            border-bottom-color: bisque;
+            border-left-color: blue;
+        }
+
+        #second {
+            border-top: 2px solid blue;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 40px;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 100px;
+        }
+
+        #third {
+            border: 3px solid green;
+            /*
+            border-radius koseleri yuvarlamaya yarar
+            */
+            border-radius: 20px;
+            /*
+            tam bir cember yapmak istersem eger;
+            border-radius: 50%; yazmam gerekir
+            */
+        }
+
+        #messageBox {
+            background-color: lightgray;
+            border-left: 5px solid green;
+            border-right: 15px solid blue;
+            margin: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box" id="first">
+        box 1
+    </div>
+
+    <div class="box" id="second">
+        box 2
+    </div>
+
+    <div class="box" id="third">
+        box 3
+    </div>
+
+    <div id="messageBox">
+        message box
+    </div>
+
+</body>
+
+</html>
