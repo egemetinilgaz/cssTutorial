@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>box odel</title>
+    <style>
+        #box1 {
+            box-sizing: content-box;
+            width: 300px;
+            height: 100px;
+            background: gray;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 10px solid red;
+        }
+
+        #box2 {
+            box-sizing: border-box;
+            width: 300px;
+            height: 100px;
+            background: orange;
+            padding: 10px;
+            border: 10px solid red;
+        }
+
+        /*
+        varsayilan olarak box-sizing'i content-box'dir
+        yano box'in normal degerlerine, padding ve border'i ekleyerek toplam genisligini bulmam gerekiyor
+        
+        box-sizing: border-box; diyerek, padding ve border'da icinde olacak sekilde 300px yapmis oldum
+        */
+    </style>
+</head>
+
+<body>
+
+    <div id="box1">
+        300px + (10*2px) + (10*2px) = 340px
+    </div>
+
+    <div id="box2">
+        260px + (10*2px) + (10*2px) = 300px
+    </div>
+
+</body>
+
+</html>
