@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fonts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        /*
+        font ayarlamazsak eger tarayicillarin varsayilan font degerleri kalir
+        ornegin chrome tarayicisi icin 16px'dir        
+        */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+
+        p {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: 200%;
+            /*
+            burada 200% diyerek body'den sonra gelen p etiketinin ya da diger etiketlerin piksel'i body'nin 2 kati olsun diyoum
+            buna f12'den computed kismindan bakabilirsin
+            nerede avantaj saglar;
+            bunu bir kere yazdigimda ve yalnizca body etiketinin piksel'ini degistirdigimde p etiketi de otomatik olarak 2 kati olacak sekilde ayarlanir
+            */
+
+            /*
+            200% = 2em
+            300% = 3em
+            yani ...em seklinde de yazilabilir
+            */
+        }
+
+        span {
+            font-family: 'Chilanka', cursive;
+            font-size: 3em;
+        }
+
+        div {
+            font-family: 'Satisfy', cursive;
+            font-size: 3em;
+        }
+
+        /*
+        chrome tarayicisinin varsayilan yazi tipi times new roman
+        farkli font kullanma yontemleri;
+        google'a css font style yaz ve bak
+        https://www.w3schools.com/css/css_font.asp
+        https://www.w3schools.com/cssref/pr_font_font-style.asp
+        
+        google'a google fonts yaz ve bak
+        https://fonts.google.com/
+        bunun icin once kutuphanesini yukaridaki link kismindaki gibi eklemem gerekiyor
+        daha sonra font-family kullanabilirim
+        
+        ornek;
+        font-family: "Times New Roman", Times, serif;
+        burada tarayici birincisini tanimazsa ikinciyi kullanir, onu da tanimazsa ucuncuyu kullanir
+        */
+    </style>
+</head>
+
+<body>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis quam maxime aspernatur atque, nulla sed. Consectetur dolore qui quis, atque facilis dolorem unde saepe, aut libero nobis, minima, corporis consequatur.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem esse, corporis magnam magni laudantium ad ab quis voluptatibus deleniti, qui rerum neque veniam sint voluptas maxime hic dolor error. Saepe!
+    </p>
+
+    <span>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, eum, odio! Natus odit quos corporis ducimus deleniti officia impedit eaque, porro iure eveniet dolores, consequatur, tenetur culpa. Delectus quae, alias!
+    </span>
+
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, distinctio, excepturi soluta recusandae harum officiis animi, delectus nostrum quam in doloribus asperiores quis ex et aliquid deserunt ea ipsa facere.
+    </div>
+
+</body>
+
+</html>
