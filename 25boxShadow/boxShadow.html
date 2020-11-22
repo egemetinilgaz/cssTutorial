@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>box shadow</title>
+    <style>
+        body {
+            background: #f2f2f2;
+        }
+
+        .card {
+            width: 300px;
+            height: 300px;
+            background: #fff;
+            border-radius: 2px;
+            margin: 20px;
+            display: inline-block;
+        }
+
+        /*
+        diger tarayicilarda dogru calismasi icin asagidaki gibi kullanmalisin
+        chrome ve safari;
+        -webkit-box-shadow: 10px 30px;
+        
+        mozilla;
+        -moz-box-shadow: 10px 30px;
+        */
+
+        .card1 {
+            /*
+            kutunun golgelendirmesi 10px yatayda, 30 px dikeyde olur     
+            */
+            box-shadow: 10px 30px;
+        }
+
+        .card2 {
+            /*
+            3. sirada verdigim deger biraz daha blur efekti saglar
+            */
+            box-shadow: 10px 10px 20px;
+        }
+
+        .card3 {
+            /*
+            4. sirada verdigim deger golgenin biraz daha dagitilmasini saglar
+            ayni zamanda opacity degeri de verebilirim
+            direkt renk verebilirim
+            */
+            box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, .4);
+        }
+
+        .card4 {
+            /**/
+        }
+
+        .card4:hover {
+            /*
+            4. sirada verdigim deger golgenin biraz daha dagitilmasini saglar
+            ayni zamanda opacity degeri de verebilirim
+            direkt renk verebilirim
+            */
+            box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, .4);
+        }
+
+        .card5 {
+            /*
+            3. sirada verdigim deger biraz daha blur efekti saglar
+            virgulden sonra uzerine ikinci bir efekt ekliyorum
+            */
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.30);
+        }
+
+        .card6 {
+            /*
+            once border olusturdum ve daha sonra golge verdim, bu sekilde daha da guzel gorunebilir
+            */
+            border: 1px solid #bfbfbf;
+            box-shadow: 10px 10px 5px #aaaaaa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card card1">
+
+    </div>
+
+    <div class="card card2">
+
+    </div>
+
+    <div class="card card3">
+
+    </div>
+
+    <div class="card card4">
+
+    </div>
+
+    <div class="card card5">
+
+    </div>
+
+    <div class="card card6">
+
+    </div>
+
+</body>
+
+</html>
