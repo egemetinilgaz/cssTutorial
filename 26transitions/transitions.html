@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transitions</title>
+    <style>
+        /*
+        tarayicilarda sorunsuz calismasi icin;
+        
+        chrome ve safari icin;
+        -webkit-transition: width 2s, height 2s, background 1s;
+        
+        mozilla icin;
+        -moz-transition: width 2s, height 2s, background 1s;
+        
+        opera icin;
+        -o-transition: width 2s, height 2s, background 1s;
+        */
+
+        .card {
+            width: 150px;
+            height: 150px;
+            background: blue;
+            /*
+            transition'dan sonra degismesini istedigim ozelligi yaziyorum daha sonra da sureyi belirtiyorum
+            */
+            transition: width 2s, height 2s, background 1s;
+            /*
+            transition-delay islemi 1 saniye sonra baslar
+            */
+            transition-delay: 1s;
+            margin-bottom: 10px;
+        }
+
+        .card:hover {
+            width: 250px;
+            height: 250px;
+            background: red;
+        }
+
+        #card1 {
+            /*varsayilan ozellik yavas baslar hizlanir, bitmeye yakin yine yavaslar*/
+            transition-timing-function: ease;
+        }
+
+        #card2 {
+            /*baslangictan sona kadar ayni hizda devam eder*/
+            transition-timing-function: linear;
+        }
+
+        #card3 {
+            /*yavas baslar daha sonra hizlanir*/
+            transition-timing-function: ease-in;
+        }
+
+        #card4 {
+            /*hizli baslar daha sonra yavaslar*/
+            transition-timing-function: ease-out;
+        }
+
+        #card5 {
+            /*baslangicta ve bitiste yavas, ortada hizli*/
+            transition-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <!--css efektlerinin belli bir sure icerisinde degismesine denir-->
+    <div id="card1" class="card">
+
+    </div>
+
+    <div id="card2" class="card">
+
+    </div>
+
+    <div id="card3" class="card">
+
+    </div>
+
+    <div id="card4" class="card">
+
+    </div>
+
+    <div id="card5" class="card">
+
+    </div>
+
+</body>
+
+</html>
