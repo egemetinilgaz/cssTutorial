@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>media queries & breakpoints</title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+        body {
+            background: gray;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        /*
+        ekranim 700px ve altinda oldugunda h1 devreye girer
+        */
+        @media screen and (max-width: 700px) {
+            h1 {
+                font-size: 16px;
+            }
+
+            body {
+                background: blue;
+            }
+        }
+
+        /*
+        400px geldiginde 16px degil, 12px olmasini sagliyorum
+        */
+        @media screen and (max-width: 400px) {
+            h1 {
+                font-size: 12px;
+            }
+
+            body {
+                background: red;
+            }
+        }
+
+        /*
+        bunlarin devreye girmesi icin yukarida bir meta etiketi tanimliyorum
+        */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            /*icinde oldugu satirin %25'ini kapsasin*/
+            width: 25%;
+            height: 250px;
+            background: yellow;
+            float: left;
+            border: 1px solid orange;
+        }
+
+        /*
+        700px altina indigim an kutular ekranin %50'sini kapsar
+        */
+        @media screen and (max-width:700px) {
+            .box {
+                width: 50%;
+            }
+        }
+
+        /*
+        400px altina indigim an kutular ekranin %100'unu kapsar
+        */
+        @media screen and (max-width:400px) {
+            .box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>
+        komple uygulamali web gelistirme egitimi
+    </h1>
+
+    <div class="box">
+
+    </div>
+
+    <div class="box">
+
+    </div>
+
+    <div class="box">
+
+    </div>
+
+    <div class="box">
+
+    </div>
+
+    <div class="box">
+
+    </div>
+
+</body>
+
+</html>
