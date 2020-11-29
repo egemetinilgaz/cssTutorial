@@ -1,0 +1,223 @@
+/*scss*/
+$color-primary: #ff5733;
+
+ul {
+    list-style: none;
+
+    li {
+        display: inline-block;
+        color: $color-primary;
+    }
+}
+
+/*sass*/
+
+$color-primary: #ff5733 
+
+ul 
+list-style: none 
+
+& li 
+display: inline-block 
+color: $color-primary
+/*-------------------------------------------------------------------------*/
+
+/*codepen.io kodlari asagida (scsskodlari)*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+$color-primary: #007bff;
+$color-secondary: #6c757d;
+$color-success: #28a745;
+$color-white: #fff;
+$width-button: 100px;
+
+nav {
+    margin: 50px;
+    background-color: $color-secondary;
+
+    &::after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+
+}
+
+.navigationLeft {
+    list-style: none;
+    float: left;
+
+    li {
+        display: inline-block;
+        margin-left: 20px;
+
+        /*
+        .navigationLeft'in alltindaki
+        li'nin first-child'ina ulastim        
+        */
+        &:first-child {
+            margin: 0px;
+        }
+
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $color-white;
+            display: inline-block;
+            padding: 10px;
+        }
+
+    }
+
+}
+
+.navigationRight {
+    float: right;
+}
+
+.btnLogin,
+.btnSignup {
+    padding: 10px;
+    display: inline-block;
+    width: $width-button;
+    border-radius: 100px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-white;
+    text-align: center;
+}
+
+.btnLogin,
+.btnSignup {
+    &:link {
+        background-color: $color-primary;
+    }
+
+    &:hover {
+        /*
+        darken($color-primary, 20%) => secilenrengi %20 daha koyu yapar
+        lighten($color-primary, 20%) => secilenrengi %20 daha acik yapar
+        */
+        background-color: darken($color-primary, 20%);
+    }
+
+}
+
+/*
+yukaridaki kodlari mixin ve nesting ile yazdim
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+$color-primary: #007bff;
+$color-secondary: #6c757d;
+$color-success: #28a745;
+$color-white: #fff;
+$color-black: #000;
+$width-button: 100px;
+
+/*burada islem yaptim*/
+@mixin clearFix {
+    &::after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+}
+
+/*burada islem yaptim*/
+@mixin linkColor($color) {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color;
+}
+
+nav {
+    margin: 50px;
+    background-color: $color-secondary;
+    /*burada islem yaptim*/
+    @include clearFix;
+}
+
+.navigationLeft {
+    list-style: none;
+    float: left;
+
+    li {
+        display: inline-block;
+        margin-left: 20px;
+
+        /*
+        .navigationLeft'in alltindaki
+        li'nin first-child'ina ulastim        
+        */
+        &:first-child {
+            margin: 0px;
+        }
+
+        a {
+            /*burada islem yaptim*/
+            @include linkColor($color-white);
+            display: inline-block;
+            padding: 10px;
+        }
+
+    }
+
+}
+
+.navigationRight {
+    float: right;
+}
+
+/*burada islem yaptim*/
+%btnPlaceholder {
+    padding: 10px;
+    display: inline-block;
+    width: $width-button;
+    border-radius: 100px;    
+    text-align: center;
+    /*burada islem yaptim*/
+    @include linkColor($color-black);
+}
+
+.btnLogin {
+    &:link {
+        /*burada islem yaptim*/
+        @extend %btnPlaceholder;
+        background-color: $color-primary;
+    }
+
+    &:hover {
+        /*
+        darken($color-primary, 20%) => secilenrengi %20 daha koyu yapar
+        lighten($color-primary, 20%) => secilenrengi %20 daha acik yapar
+        */
+        background-color: darken($color-primary, 20%);
+    }
+
+}
+
+.btnSignup {
+    &:link {
+        /*burada islem yaptim*/
+        @extend %btnPlaceholder;
+        background-color: $color-secondary;
+    }
+
+    &:hover {
+        /*
+        darken($color-primary, 20%) => secilenrengi %20 daha koyu yapar
+        lighten($color-primary, 20%) => secilenrengi %20 daha acik yapar
+        */
+        background-color: lighten($color-secondary, 20%);
+    }
+
+}
