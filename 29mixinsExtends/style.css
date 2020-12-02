@@ -1,0 +1,58 @@
+/*
+mixin kodlari (scss kodlari)
+*/
+
+div {
+    float: left;
+}
+
+@mixin box ($color, $width) {
+    width: $width;
+    height: 100px;
+    background-color: $color;
+    margin: 15px;
+}
+
+#first {
+    @include box (red, 200px);
+}
+
+#second {
+    @include box (green, 300px);
+}
+
+#third {
+    @include box (blue, 400px);
+}
+
+/*
+extend kodlari
+*/
+
+div {
+    float: left;
+}
+
+/*
+% yerine . da koyabilirim ancak . koydugum zaman temel css kodlarinda box'i icerige alir
+*/
+%box {
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+}
+
+#first {
+    @extend %box;
+    background-color: red;
+}
+
+#second {
+    @extend %box;
+    background-color: green;
+}
+
+#third {
+    @extend %box;
+    background-color: blue;
+}
