@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>flex container</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            /*bunu yaptigim an artik inline-block olr ve yan yana dizilirler*/
+            display: flex;
+            align-items: center;
+            background-color: #f2f2f2;
+            padding: 15px;
+        }
+
+        .item {
+            padding: 30px;
+            background-color: chocolate;
+            margin: 30px;
+            color: #fff;
+            font-size: 25px;
+            /*elemanlar icerisinde bulundugu container'i esit oranda kaplar*/
+            flex-grow: 1;
+            /*flex: 1;, flex-grow: 1; ile ayni anlama gelir*/
+        }
+
+        .i1 {
+            align-self: stretch;
+            /*en buyuk deger oldugu icin siralamada en sona gelir*/
+            order: 6;
+            /*butun elemanlar esit oranda yer kaplarken, item 1 flex-grow: 2; oldugundan diger elemanlarin 2 kati kadar yer kaplar*/
+            flex-grow: 2;
+            /*yalnazca bir elemana flex verirsem, digerleri flex: 0 olur, ozel flex verdigim eleman sayfanin geri kalanini kapsar*/
+        }
+
+        .i2 {
+            /*burada bu elemana self ile varsayilan ozelligi verdim*/
+            height: 200px;
+            /*zaten en sondaydi ama oyle olmasa bile en buyuk degeri aldigi icin en sona gelecekti*/
+            order: 5;
+            /*ayni sekilde, diger elemanlara gore 4 birimlik yer kaplar*/
+            flex-grow: 4;
+            /*flex-basis: 15%; diyerek i2'ye container'in tamaminin %15'i verilir, i1'in flex degerini 1 olarak dusunursek, %15'den geriye ne kaliyorsa i1 buna gore alan kaplar ve flex verilmeyen dier elemanlar da yine bu kalan alana gore yer kaplar, ancak burada  % olarak verdigim deger tayarici daraldikca degisir*/
+            flex-basis: 15%;
+            // flex-basis: 200px; 
+            /*
+            dersem, bu deger sabir olacagindan, tarayici daralsa dahi bu boyut degismez, ancak yeteri kadar yer kalmaz ve daralma devam ederse o zaman sabit degerli elemanim da daralmaya baslar
+            
+            ancak bunu engellemenin yolu sudur;
+            */
+            /*flex-shrink: 1; varsayilan degerdir*/
+            /*ben buraya 0 dersem, yeteri kadar daraldiginda bu sefer tarayicida scrollbar cikar ve daralma olmaz*/
+            flex-shrink: 0;
+
+            /*butun bu ozellikleri tek bir seferde de yazabilirim*/
+            /*
+            ilk deger yani 0 flex-grow'u
+            ikinci deger yani 1 flex-shrink'i
+            ucuncu deger yani 200px flex-basis'i temsil eder
+            
+            yani 3 satida yaptigim islemi tek satirda yaparim
+            */
+            // flex: 0 1 200px;          
+        }
+
+        .i3 {
+            /*burada bu elemana self ile digerlerinden bagimsiz bir konum verdim*/
+            align-self: flex-start;
+            /*elemanlari siralamama yarar, -2 dedigimde i3'u en basa alir ve diger akis aynen devam eder, bu sefer i3'u basa almasinin sebebi daha kucuk bir deger vermem*/
+            order: -2;
+        }
+
+        .i4 {
+            /*burada bu elemana self ile digerlerinden bagimsiz bir konum verdim*/
+            align-self: flex-end;
+            /*elemanlari siralamama yarar, -1 dedigimde i4'u en basa alir ve diger akis aynen devam eder*/
+            order: -1;
+        }
+
+        .imgWidth {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="item i1">
+
+            item 1
+
+        </div>
+
+        <div class="item i2">
+
+            item 2
+
+        </div>
+
+        <div class="item i3">
+
+            item 3
+
+        </div>
+
+        <div class="item i4">
+
+            item 4
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

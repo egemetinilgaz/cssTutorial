@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>flex container</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            /*bunu yaptigim an artik inline-block olr ve yan yana dizilirler*/
+            display: flex;
+            /*
+            nesneleri yatayda justify-content ile hizalarim
+            dikeyde ise align-items ozelligi ile hizalarim
+            ancak burada flex-direction: column; diyerek dikey konuma gecsem dahi nesneleri align-items
+            ile hizalayacagim, bunu soyle dusun
+            elimde dikey bir contoiner var ve ben bunu sadece saga dogru kaldirdim
+            ornegini image/column dosyasinda veriyorum
+            asagidaki align-items ozelliklerinde bulunan yorum satirlarini kaldirarak deneyebilirsin
+            */
+            flex-direction: column;
+            /*elemanlari yatayda hizalar ve ortalar, tarayiciyi kucultsem dahi kenardaki bosluklar sagdan soldan yine esit kalmaya devam eder*/
+            justify-content: center;
+            /*elemanlar sola hizalanir*/
+            // justify-content: flex-start;
+            /*elemanlar saga hizalanir*/
+            // justify-content: flex-end;
+            /*her eleman arasinda esit bosluk birakarak hizalama yapar, sagdan soldan benim verdigim margin ve padding degerleri gecerlidir, onlari isin icine katmaz*/
+            // justify-content: space-between;
+            /*burada da yine elemanlar arasinda bosluk birakir, aradaki fark ise, bu sefer sagdan soldan da bosluk birakir, olculer de su sekildedir, sagdan soldan x kadar bosluk varsa, elemanlar arasinda 2x bosluk vardir, yani aralardaki boslugun yarisi kadar sagdan ve soldan bosluk birakilir*/
+            // justify-content: space-around;
+            /*her yerden esit bosluk birakir, sadan soldan da dahil olmak uzere*/
+            // justify-content: space-evenly;
+
+            /*---------------yukaridaki kodlar yatay icindi, simdi dikey icin kodlar yazacagim--------------*/
+            /*varsayilan ozellik, butun elemanlari hizalar*/
+            // align-items: stretch;
+            /*yuksekligi sabit olarak verilen elemanlar degisirken, bu sefer digerleri ona ayak uydurmaz, ortada hizalanir*/
+            // align-items: center;
+            /*yukaridaki gibi hizalama yapar, elemanlar yukarda hizalanir*/
+            // align-items: flex-start;
+            /*yukaridaki gibi hizalama yapar, elemanlar asagida hizalanir*/
+            // align-items: flex-end;
+            /*hizalamayi  item 4 yazisinin altindan yapar, yani iceriklerin, yazilarin tam allt sinirindan hizalamaya baslar*/
+            // align-items: baseline;
+            background-color: #f2f2f2;
+            padding: 15px;
+        }
+
+        .item {
+            padding: 30px;
+            background-color: chocolate;
+            margin: 30px;
+            color: #fff;
+            font-size: 25px;
+        }
+
+        .i2 {
+            height: 200px;
+        }
+
+        .i3 {
+            height: 300px;
+        }
+
+        .i4 {
+            /*yazi icerigini hizalamanin seklini gormek icin buyuk yaptim*/
+            font-size: 60px;
+        }
+
+        .imgWidth {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+        <img class="imgWidth" src="images/flexDirectionColumn.png" alt="">
+
+    </div>
+
+    <div class="container">
+
+        <div class="item">
+
+            item 1
+
+        </div>
+
+        <div class="item i2">
+
+            item 2
+
+        </div>
+
+        <div class="item i3">
+
+            item 3
+
+        </div>
+
+        <div class="item i4">
+
+            item 4
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
