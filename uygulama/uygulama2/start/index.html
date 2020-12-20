@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>start index html</title>
+
+    <style>
+        /*
+        
+        1- tum kutulara 300px genislik ve yukseklik ver, game header'i kapsamasin
+        2- tum kutulara border ver
+        3- box #1: kirmizi, box #2: blue, box #1: turuncu arkaplan rengi ver
+        4- tum kutulari yan yana g (inline-block ozelligini kullan)
+        5- sayfa basliginin yuksekligini 150px ve arkaplan rengini de gri yap
+        
+        */
+
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            display: inline-block
+        }
+
+        #div1 {
+            background-color: red;
+        }
+
+        #div2 {
+            background-color: blue;
+        }
+
+        #div3 {
+            background-color: orangered;
+        }
+
+        #header {
+            height: 150px;
+            background-color: dimgray
+        }
+
+        /*
+        renkleri de birden fazla defa kullanacak olsam id degeri vererek degil
+        class etiketleri ile kullanabilirim
+        ornek;
+        .red {            
+            background-color: red
+        }
+        
+        <div id="div1" class="box red">
+            box #1
+        </div>
+        
+        */
+    </style>
+
+</head>
+
+<body>
+
+    <div id="header">
+        game header
+    </div>
+
+    <div id="div1" class="box">
+        box #1
+    </div>
+
+    <div id="div2" class="box">
+        box #2
+    </div>
+
+    <div id="div3" class="box">
+        box #3
+    </div>
+
+</body>
+
+</html>
