@@ -1,0 +1,174 @@
+/*
+<body> font-size 14px ve background #f2f2f2
+*/
+
+body {
+    font-size: 14px;
+    background-color: #f2f2f2;
+}
+
+/*
+h1 etiketine gray border ve padding 5px ekle
+*/
+
+h1 {
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+/*
+h2 etiketlerinin yazı rengini kirmizi yap
+*/
+
+h2 {
+    color: red;
+}
+
+/*
+h2 etiketlerinden sinifi active olana pembe border ekle
+*/
+
+h2.active {
+    border: 1px solid pink;
+}
+
+/*
+paragraf etiketlerinden, paragraf id'sine sahip olan etikete font kalinligi ver
+*/
+
+p#paragraf {
+    font-weight: bold;
+}
+
+/*
+div icindeki h3 etiketlerine gold arkaplan ekle
+*/
+
+div h3 {
+    background-color: gold;
+}
+
+/*
+h1'den sonra gelen ayni seviyedeki tum p'lerin arkaplani red olsun 
+*/
+
+h1 ~ p {
+    background-color: red;
+}
+
+/*
+div icindeki tum p etiketlerinin arka planini aqua yap 
+*/
+
+div p {
+    background-color: aqua;
+}
+
+/*
+tum liste eleanlarina gray border ve margin-top: 2px ekle
+*/
+
+ul li {
+    border: 1px solid gray;
+    margin-top: 2px;
+}
+
+/*
+active sinifina sahip tum liste elemanlarina gold arkaplan ekle
+*/
+
+ul li.active {
+    background-color: gold;
+}
+
+/*
+liste elemanlarindan ilkinin kelime araligini arttir
+*/
+
+ul li:first-child {
+    word-spacing: 5px;
+}
+
+/*
+liste elemanlarindan en sondakinin harf aralıgını arttır
+*/
+
+ul li:last-child {
+    letter-spacing: 5px;
+}
+
+/*liste eleman index'i tek olanlarin yazi rengini chocolate, font'u kalin yap
+*/
+
+ul li:nth-child(odd) {
+    color: chocolate;
+    font-weight: bold;
+}
+
+/*
+liste eleman index'i cift olanlarin yazi rengini turuncu, font'u kalin yap
+*/
+
+ul li:nth-child(even) {
+    color: orange;
+    font-weight: bold;
+}
+
+/*
+input nesnelerinden text ve password olanlara asagidaki css kodlarini uygula
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+*/
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+}
+
+/*input nesnelerinden type'i submit olana asagidaki css kodlarını uygula
+    width: 100%;
+    background-color: darkcyan;
+    color: white;
+    padding: 12px 18px;
+    margin: 7px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+*/
+
+input[type="submit"] {
+    width: 100%;
+    background-color: darkcyan;
+    color: white;
+    padding: 12px 18px;
+    margin: 7px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /*
+    border-radius: 4px; koselerin keskinligini ayarlar
+    cursor: pointer; mouse ile uzerine gelindiginde el isareti cikmasini saglar
+    */
+}
+
+/*
+submit butonuna hover olayı gerceklestiginde arkaplan rengini #45a049 yapı
+*/
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/*
+input kutularindan type'i text ve password olanlarin focus olayı gerceklestiginde arkaplan renklerini lightgoldenrodyellow yap
+*/
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background-color: lightgoldenrodyellow;
+}
