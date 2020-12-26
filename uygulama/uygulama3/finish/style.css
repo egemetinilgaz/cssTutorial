@@ -130,7 +130,8 @@ input[type="password"] {
     box-sizing: border-box;
 }
 
-/*input nesnelerinden type'i submit olana asagidaki css kodlarını uygula
+/*
+input nesnelerinden type'i submit olana asagidaki css kodlarını uygula
     width: 100%;
     background-color: darkcyan;
     color: white;
