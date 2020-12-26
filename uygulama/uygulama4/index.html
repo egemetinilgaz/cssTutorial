@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>styling table</title>
+    <style>
+        table {
+            width: 100%;
+            /*border'lardaki bosluklari aldim*/
+            border-collapse: collapse;
+        }
+
+        .tableBlue th {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .tableGreen th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        table th {
+            /*th kismini sola yasladim*/
+            text-align: left;
+        }
+
+        table td,
+        table th {
+            border: 1px solid #ddd;
+            padding: 6px;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        table tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table class="tableBlue">
+
+        <thead>
+
+            <tr>
+
+                <th>
+                    name
+                </th>
+
+                <th>
+                    description
+                </th>
+
+                <th>
+                    price
+                </th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>
+                    product 1
+                </td>
+
+                <td>
+                    Lorem ipsum dolor sit amet.
+                </td>
+
+                <td>
+                    $10
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    product 2
+                </td>
+
+                <td>
+                    Lorem ipsum dolor sit amet.
+                </td>
+
+                <td>
+                    $20
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    product 3
+                </td>
+
+                <td>
+                    Lorem ipsum dolor sit amet.
+                </td>
+
+                <td>
+                    $30
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    product 4
+                </td>
+
+                <td>
+                    Lorem ipsum dolor sit amet.
+                </td>
+
+                <td>
+                    $40
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    product 5
+                </td>
+
+                <td>
+                    Lorem ipsum dolor sit amet.
+                </td>
+
+                <td>
+                    $50
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <hr>
+
+    <table class="tableGreen">
+
+        <thead>
+
+            <tr>
+
+                <th>
+                    name
+                </th>
+
+                <th>
+                    description
+                </th>
+
+                <th>
+                    price
+                </th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>
+                    product 1
+                </td>
+
+                <td>
+                    Lorem ipsum dolor sit amet.
+                </td>
+
+                <td>
+                    $10
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    product 2
+                </td>
+
+                <td>
+                    Lorem ipsum dolor sit amet.
+                </td>
+
+                <td>
+                    $20
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    product 3
+                </td>
+
+                <td>
+                    Lorem ipsum dolor sit amet.
+                </td>
+
+                <td>
+                    $30
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    product 4
+                </td>
+
+                <td>
+                    Lorem ipsum dolor sit amet.
+                </td>
+
+                <td>
+                    $40
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    product 5
+                </td>
+
+                <td>
+                    Lorem ipsum dolor sit amet.
+                </td>
+
+                <td>
+                    $50
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>
