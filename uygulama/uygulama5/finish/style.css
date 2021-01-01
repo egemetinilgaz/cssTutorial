@@ -1,0 +1,18 @@
+#container {
+    width: 1140px;
+    background-color: antiquewhite;
+}
+
+#blogPostContainer {
+    width: 75%;
+    background-color: aquamarine;
+}
+
+#othersPosts {
+    width: 25%;
+    background-color: brown;
+}
+
+#authorBox {
+    border: 1px solid blue;
+}
