@@ -1,0 +1,33 @@
+#container {
+    width: 1140px;
+}
+
+#blogPostContainer {
+    width: 75%;
+    float: left;
+}
+
+#othersPosts {
+    width: 25%;
+    float: left;
+}
+
+#authorBox {}
+
+.tags li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.tags {
+    margin: 0px;
+    padding: 0px;
+}
+
+.tags li a {
+    /*
+    linklerin altindaki cizgileri kaldirdim
+    */
+    text-decoration: none;
+}
