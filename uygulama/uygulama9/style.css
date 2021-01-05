@@ -1,0 +1,51 @@
+#container {
+    width: 1000px;
+}
+
+#blogPostContainer {
+    width: 75%;
+    float: left;
+}
+
+#othersPosts {
+    width: 25%;
+    float: left;
+    position: fixed;
+    top: 20px;
+    right: 0px;
+}
+
+#authorBox {}
+
+.blogPost {
+    position: relative;
+}
+
+.date {
+    /*
+    bir ust kodda blogPost'un position'ina relative verdim, cunku bu div'in sag ustune almam gerekiyor
+    diger turlu hepsi body kisminin sag ustune toplanir ve ust uste gelir
+    */
+    position: absolute;
+    ;
+    right: 20px;
+    top: 0px;
+}
+
+.tags li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.tags {
+    margin: 0px;
+    padding: 0px;
+}
+
+.tags li a {
+    /*
+    linklerin altindaki cizgileri kaldirdim
+    */
+    text-decoration: none;
+}
