@@ -1,0 +1,143 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    color: #333;
+    line-height: 135%;
+    background: #f1f1f1;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+#container {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+#blogPostContainer {
+    width: 75%;
+    float: left;
+}
+
+#othersPosts {
+    width: 25%;
+    float: left;
+    padding-left: 10px;
+}
+
+#authorBox {}
+
+.box {
+    background: white;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /*kutu golgelendirmesi yapacagim*/
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .09);
+}
+
+.blogPost {
+    position: relative;
+}
+
+.blogPost img {
+    width: 100%;
+}
+
+.date {
+    /*
+    bir ust kodda blogPost'un position'ina relative verdim, cunku bu div'in sag ustune almam gerekiyor
+    diger turlu hepsi body kisminin sag ustune toplanir ve ust uste gelir
+    */
+    position: absolute;
+    ;
+    right: 20px;
+    top: 20px;
+    color: #aaa;
+    font-size: 12px;
+}
+
+.blogText {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #aaa;
+    line-height: 22px;
+    text-align: justify;
+}
+
+.tags li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.tags li a {
+    /*
+    linklerin altindaki cizgileri kaldirdim
+    */
+    text-decoration: none;
+}
+
+#authorBox {
+    border-top: 1px solid RGB(0, 0, 0, .125);
+    padding-top: 10px;
+}
+
+#authorBox img {
+    border-radius: 50%;
+    float: left;
+}
+
+.authorText {
+    float: left;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+#share a {
+    color: gray;
+    text-decoration: none;
+    margin-right: 12px;
+    /*seffaflik ayarlayacagim*/
+    opacity: 0.6;
+}
+
+#share a:hover {
+    /*mouse ile uzerine geldigimde seffaflik ayarlayacagim*/
+    opacity: 0.9;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.header {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+.tag {
+    background-color: #000;
+    color: white;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    border-radius: 3px;
+}
