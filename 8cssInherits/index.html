@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css inherit</title>
+    <style>
+        body {
+            color: brown;
+            font-size: 20px;
+        }
+
+        ul {
+            color: darkgoldenrod;
+            font-size: 40px;
+        }
+
+        li {
+            color: yellowgreen;
+        }
+
+        .orange {
+            color: orange;
+        }
+
+        /*
+         .orange {
+            color: orange !important;
+        }
+        dersem eger html5'e verdigim daha ozel olan id rengi gecersiz olurdu
+        !important ile her seyi en one cekebilirim
+        */
+
+        #passive {
+            color: gray;
+            font-size: 55px;
+        }
+
+        /*yukaridaki etiketler ile "a" etiketi etkilenmez ve buna inherit denir, "a" etiketi body etiketinden miras almaz*/
+
+        /*a {
+            color: red;
+            font-size: 20px;
+        }*/
+
+        /*
+        yukaridaki gibi yazmak yerine inherit ile "a" nesnesinin bir ust elemani olan "li" nesnesinin ozelliklerini almasini saglayanilirim       
+        */
+
+        a {
+            /*a'nin bir ust elemani li oldugu icin li ile ayni rengi aldi*/
+            color: inherit;
+        }
+
+        span {
+            color: red;
+            border: 1px solid green;
+        }
+
+        /*inherit'in altindaki span nesnesi icin color'i inherit et diyorum
+        eger <div id="inherit" style="color: aqua"> buradaki color: aqua olmasaydi bunun da bir ust nesnesi olam body'nin rengini alacakti'*/
+        #inherit span {
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="orange">
+        Komple Uygulamalı Web Geliştirme
+    </h1>,
+
+    <ul>
+
+        <li id="passive" class="orange">
+            Html5
+        </li>
+
+        <li>
+            Css
+        </li>
+
+        <li class="orange">
+            Javascript
+        </li>
+
+        <li>
+
+            <a href="#">
+                Jquery
+            </a>
+
+        </li>
+
+    </ul>
+
+
+    <!--burada verdigim aqua rengini div icindeki span almaz buna dikkat et, cunku yukarida style kisminda ben span'a ozel bir renk olusturdum-->
+    <div id="inherit" style="color: aqua">
+        Lorem ipsum <span>dolor sit amet,</span> consectetur adipisicing.
+    </div>
+
+    <div style="color: chartreuse">
+        Lorem ipsum <span>dolor sit amet,</span> consectetur adipisicing.
+    </div>
+
+    <div>
+        Lorem ipsum <span>dolor sit amet,</span> consectetur adipisicing.
+    </div>
+
+</body>
+
+</html>
