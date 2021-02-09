@@ -1,0 +1,223 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    color: #333;
+    line-height: 135%;
+    background: #f1f1f1;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.container {
+    width: 1000px;
+    margin: 0px auto;
+}
+
+#blogPostContainer {
+    width: 75%;
+    float: left;
+}
+
+#othersPosts {
+    width: 25%;
+    float: left;
+    padding-left: 20px;
+}
+
+#authorBox {}
+
+.padding20px {
+    padding: 20px;
+}
+
+.marginTop20px {
+    margin-top: 20px;
+}
+
+.box {
+    background: white;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    /*kutu golgelendirmesi yapacagim*/
+    box-shadow: 0px 2px 8px 2px rgba(20, 23, 28, 0.15);
+}
+
+.blogPost {
+    position: relative;
+}
+
+.blogPost img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: opacity 0.3s linear;
+}
+
+.blogPost img:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.blogTitle {
+    font-weight: 700;
+}
+
+.blogTitle a {
+    color: #444;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.blogTitle a:hover {
+    color: #da4453;
+}
+
+.date {
+    /*
+    bir ust kodda blogPost'un position'ina relative verdim, cunku bu div'in sag ustune almam gerekiyor
+    diger turlu hepsi body kisminin sag ustune toplanir ve ust uste gelir
+    */
+    position: absolute;
+    ;
+    right: 20px;
+    bottom: 20px;
+    color: #aaa;
+    font-size: 12px;
+}
+
+.blogText {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #aaa;
+    line-height: 22px;
+    text-align: justify;
+}
+
+.tags li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.tags li a {
+    /*
+    linklerin altindaki cizgileri kaldirdim
+    */
+    text-decoration: none;
+}
+
+#authorBox {
+    border-top: 1px solid RGB(0, 0, 0, .125);
+    padding-top: 10px;
+}
+
+#authorBox img {
+    border-radius: 50%;
+    float: left;
+}
+
+.authorText {
+    float: left;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+#share a {
+    color: gray;
+    text-decoration: none;
+    margin-right: 12px;
+    /*seffaflik ayarlayacagim*/
+    opacity: 0.6;
+}
+
+li {
+    list-style: none;
+}
+
+#share a:hover {
+    /*mouse ile uzerine geldigimde seffaflik ayarlayacagim*/
+    opacity: 0.9;
+}
+
+.tags ul {
+    list-style-type: none;
+}
+
+.tags ul li {
+    margin-bottom: 10px;
+}
+
+.header {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+}
+
+.tag {
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.buton {
+    display: inline-block;
+    font-size: 10px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #dd4453;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color 0.3s linear;
+}
+
+.buton:hover {
+    background-color: #363636;
+    border-color: #363636;
+}
+
+/*navbar codes*/
+
+.nav {
+    background-color: #333;
+}
+
+.nav ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.nav li {
+    float: left;
+}
+
+.nav li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s linear;
+}
+
+.nav li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #dd4453;
+}
