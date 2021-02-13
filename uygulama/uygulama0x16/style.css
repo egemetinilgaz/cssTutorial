@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+#gallery {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+.itemContainer {
+    width: 25%;
+    float: left;
+    padding: 10px;
+}
+
+.galleryItem {
+    border: 1px solid #ccc;
+}
+
+.galleryItem:hover {
+    cursor: pointer;
+    border: 1px solid #777;
+}
+
+.galleryItem img {
+    /*
+    burada sunu diyorum;
+    sayfa 1000px ve her biri %25 yer kaplasin
+    width: 100% diyerek ise, %25'in, %100'unu kapsasin, yani tam olarak fotograf sigsin
+    */
+    width: 100%;
+    /*
+    height: 200px dedigimde farkli boyuttaki fotograflarin yuksekligini sabitlemis olurum
+    ancak, fotograflarin orjinal goruntusu bozulur ve basik ya da uzun gorunur
+    bunu engelleme icin de object-fit: cover'i kullanirim, bu da fotografin bir kisminin gitmesine yol acar
+    etrafindan kesilir
+    ama fotografim orjinal boyutunu korur ve duzgun gorunur
+    
+    object-fit: cover; bu fotografin bir kisminin gitmesine yol acar
+    etrafindan kesilir
+    ama fotografim orjinal boyutunu korur ve duzgun gorunur
+    
+    object-fit: contain; fotografi kirpmadan container icine sigdirmaya calisir
+    
+    object-fit: fill; varsayilan ozellik
+    
+    object-fit: none; hicbir sekilde kirpma yapmadan fotografin bir kismini gosterir
+    bu ozellikten sonra fotografin hangi kisminin gozukmesini istersem ona gore asagidaki kodu yazabilirim
+    object-position: bottom;
+    dersem, fotoografin alt kismi gorunur
+    
+    object-position: 30% 50%;
+    dersem
+    soldan saga dogru %30
+    yukaridan asagi dogru %50 olarak gorurum
+    */
+    height: 200px;
+    object-fit: cover;
+}
+
+.description {
+    text-align: center;
+    padding: 15px;
+}
