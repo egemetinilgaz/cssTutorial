@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>styling forms</title>
+    <style>
+        /*
+		  input
+		
+		  color: #495057;
+		  background-color: #fff;
+		  border-color: #ced4da;  		  
+		  border-color: #80bdff;(focus)
+		  font-size: 16px;
+		
+		  button
+		
+		  color: #fff;
+		  background-color: #007bff;
+		  border-color: #007bff;		  
+		  
+		  background-color: #0069d9;
+		  border-color: #0062cc;
+		*/
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 20px;
+        }
+
+        .formControl {
+            width: 100%;
+            padding: 7px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+
+        .formControl:focus {
+            border-color: #80bdff;
+            /*cerceveyi kaldiriyorum*/
+            outline: 0;
+        }
+
+
+        .formGroup {
+            margin-bottom: 6px;
+        }
+
+        label {
+            /*margin-bottom'i inline etiketlerde veremiyordum, onun icin inline-block yapacagim*/
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .buton {
+            padding: 6px 12px;
+            border-radius: 4px;
+            color: #fff;
+            background-color: #007bff;
+            border: 1px solid #007bff;
+        }
+
+        .buton:hover {
+            background-color: #0069d9;
+            border: 1px solid #0062cc;
+        }
+
+        .col25 {
+            float: left;
+            width: 25%;
+        }
+
+        .col75 {
+            float: left;
+            width: 75%;
+        }
+
+        .isSuccess {
+            border-color: #28a745;
+        }
+
+        .isError {
+            border-color: #dc3545;
+        }
+
+        .isWarning {
+            border-color: #ffc107;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        #form2 {
+            background: #f2f2f2;
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="form1">
+
+        <div class="formGroup">
+
+            <label for="fullName">
+                Full Name
+            </label>
+
+            <input type="text" name="fullName" class="formControl isSuccess">
+
+        </div>
+
+        <div class="formGroup">
+
+            <label for="email">
+                E Mail
+            </label>
+
+            <input type="text" name="email" class="formControl isError">
+
+        </div>
+
+        <div class="formGroup">
+
+            <label for="message">
+                Message
+            </label>
+
+            <textarea name="message" class="formControl isWarning">
+
+        </textarea>
+
+        </div>
+
+        <div class="formGroup">
+
+            <label for="country">
+                Country
+            </label>
+
+            <select name="country" class="formControl">
+
+                <option value="turkiye">
+                    turkiye
+                </option>
+
+                <option value="almanya">
+                    almanya
+                </option>
+
+            </select>
+
+        </div>
+
+        <input type="submit" value="submit" class="buton">
+
+    </div>
+
+    <br>
+
+    <hr>
+
+    <br>
+
+    <div id="form2">
+
+        <div class="formGroup clearfix">
+
+            <div class="col25">
+
+                <label for="fullName">
+                    Full Name
+                </label>
+
+            </div>
+
+            <div class="col75">
+
+                <input type="text" name="fullName" class="formControl">
+
+            </div>
+
+        </div>
+
+        <div class="formGroup clearfix">
+
+            <div class="col25">
+
+                <label for="email">
+                    E Mail
+                </label>
+
+            </div>
+
+            <div class="col75">
+
+                <input type="text" name="email" class="formControl">
+
+            </div>
+
+        </div>
+
+        <div class="formGroup clearfix">
+
+            <div class="col25">
+
+                <label for="message">
+                    Message
+                </label>
+
+            </div>
+
+            <div class="col75">
+
+                <textarea name="message" class="formControl">
+
+        </textarea>
+
+            </div>
+
+        </div>
+
+        <div class="formGroup clearfix">
+
+            <div class="col25">
+
+                <label for="country">
+                    Country
+                </label>
+
+            </div>
+
+            <div class="col75">
+
+                <select name="country" class="formControl">
+
+                    <option value="turkiye">
+                        turkiye
+                    </option>
+
+                    <option value="almanya">
+                        almanya
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <input type="submit" value="submit" class="buton" style="margin-left: 25%;">
+
+    </div>
+
+
+</body>
+
+</html>
