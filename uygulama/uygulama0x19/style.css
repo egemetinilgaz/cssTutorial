@@ -1,0 +1,103 @@
+body {
+    margin: 100px;
+}
+
+.border {
+    border: 1px solid rgb(0, 0, 0, .125);
+    padding: 10px;
+    margin-right: 50px;
+}
+
+.toolTip {
+    position: relative;
+}
+
+.toolTip .toolTipText {
+    display: none;
+    width: 120px;
+    background: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0px;
+    /*z-index ust uste gelen yazilar oldugunda arkadaki yazinin gozukmemesini saglar*/
+    z-index: 1;
+    position: absolute;
+}
+
+.top {
+    bottom: 120%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+/*
+ok isareti yapiyorum
+
+renklendirmeler de saat yonunde olur
+transparent gozukmemesini saglar
+*/
+.top::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+
+}
+
+.right {
+    left: 110%;
+    top: 3px;
+}
+
+.right::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+
+.bottom {
+    top: 120%;
+    right: 50%;
+    margin-right: -60px;
+}
+
+.bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.left {
+    right: 110%;
+    top: 3px;
+}
+
+.left::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+}
+
+.toolTip:hover .toolTipText {
+    display: inline-block;
+}
