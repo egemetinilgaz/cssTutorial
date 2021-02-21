@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>acilir dropdown menu</title>
+    <style>
+        ul {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            position: absolute;
+        }
+
+        li {
+            display: inline-block;
+            float: left;
+            margin-right: 1px;
+        }
+
+        li a {
+            display: block;
+            background: #2f3036;
+            min-width: 140px;
+            color: white;
+            text-decoration: none;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        li a:hover {
+            background: #19c589;
+        }
+
+        li:hover ul a {
+            background: #f3f3f3;
+            color: black;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        li:hover ul a:hover {
+            background: #19c589;
+            color: #fff;
+        }
+
+        li ul li {
+            display: block;
+            float: none;
+        }
+
+        li ul li a {
+            text-align: left;
+            min-width: 100px;
+            padding: 0px 20px;
+        }
+
+        li:hover a {
+            background: #19c589;
+        }
+
+        li ul {
+            display: none;
+        }
+
+        /*
+        ul li a:hover+ .hidden: hidden class'inin oncesindeki ilk a etiketi yani ilk seciciye ulasiyorum
+        ve , .hidden:hover ile de hidden'in hover'inda da sirali listemi gostermeye devam ediyorum
+        */
+        ul li a:hover+.hidden,
+        .hidden:hover {
+            display: block;
+        }
+
+        /*
+        https://www.w3schools.com/cssref/css_selectors.asp
+        
+        yukaridaki listeyi incele
+        */
+    </style>
+</head>
+
+<body>
+
+    <ul>
+
+        <li>
+            <a href="#">
+                anasayfa
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                hakkimizda
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                kurslar
+            </a>
+
+            <ul class="hidden">
+
+                <li>
+                    <a href="#">
+                        komple uygulamali web gelistirme egitimi
+                    </a>
+
+                </li>
+
+                <li>
+                    <a href="#">
+                        web programlama egitimi
+                    </a>
+
+                </li>
+
+                <li>
+                    <a href="#">
+                        c# programlama dili egitimi
+                    </a>
+
+                </li>
+
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">
+                makale
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                iletisim
+            </a>
+        </li>
+
+    </ul>
+
+</body>
+
+</html>
