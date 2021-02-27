@@ -1,0 +1,184 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 7px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    /*
+    yukarida verdigim 10px ile orantili olmasi icin kullaniyorum
+    
+    yani 1.6rem = 11.2px
+    
+    bundan sonra yazacagim her px yukaridaki 7px'e gore boyutlanacak
+    */
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: center;
+    background-color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    padding: 1.6rem;
+    font-size: 2rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*
+header
+*/
+
+header {
+    height: 45rem;
+}
+
+header .bgImage {
+    position: absolute;
+    background-image: url(images/bg.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 45rem;
+    width: 100%;
+    opacity: 0.4;
+    /*
+    yazilarin on plana cikmasi icin resme arka plana attim
+    */
+    z-index: -1;
+}
+
+header h1 {
+    padding: 11rem;
+    padding-bottom: 0px;
+}
+
+.btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    border: 1px solid #666;
+    padding: 1.6rem 3.2rem;
+    margin: .5rem 0rem;
+    /*all diyerek butun hover ozelliklerini kasdettim*/
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: #eaeaea;
+    color: #333;
+}
+
+/*
+section a
+*/
+
+#sectionA {
+    background-color: #eaeaea;
+    color: #333;
+    padding: 3.2rem 0rem;
+}
+
+/*
+section b
+*/
+
+#sectionB {
+    padding: 2rem;
+}
+
+#sectionB ul {
+    list-style: none;
+}
+
+#sectionB li {
+    background: #fff;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.colContent {
+    padding: 1.5rem;
+}
+
+/*
+section c
+*/
+
+#sectionC {
+    background-color: #eaeaea;
+    color: #333;
+    padding: 5rem;
+}
+
+/*
+section d
+*/
+
+#sectionD .box {
+    padding: 5rem;
+}
+
+/*sectionD nin altindaki boxlardan ilkini sectim*/
+#sectionD .box:first-child {
+    background-color: #2690d4;
+}
+
+/*
+footer
+*/
+
+footer {
+    padding: 4rem;
+    background: #000;
+}
+
+footer a {
+    color: #2690d4;
+}
+
+/*
+yukaridaki butun css kodlarinda mobil tasarim icin yazdim
+simdi de masaustu icin css kodlari yazacagim
+*/
+
+@media screen and (min-width: 600px) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #sectionB li {
+        width: 28%;
+        margin: 1%;
+        display: inline-block;
+    }
+
+    .box {
+        width: 50%;
+        float: left;
+    }
+
+    html {
+        font-size: 12px;
+    }
+}
